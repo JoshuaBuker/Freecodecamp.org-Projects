@@ -1,11 +1,62 @@
+<!--Reference form (https://survey-form.freecodecamp.rocks/)-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>   
+    <!--The head element contains information regarding the website that is not explicitly displayed on the frontend - Also where you link a stylesheet-->
         <title>Survey Form</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <h1>Bruh</h1>
+    <!--Body is where all the visible elements will be placed - These are the ones you see on the frontend-->
+    <div id="header">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </div>
+        
+    <!--This is the start of the main form - Everything regarding the form must be within the <form></form> element-->
+    <div class="menu">
+        <form id="survey-form">
+            <label id="name-label" for="name">Name<input  id="name" type="text" required placeholder="Name" required></label>
+            <label id="email-label" for="email">Email<input id="email" type="email" placeholder="Email" required></label>
+            <label id="number-label" for="number">Age (Optional)<input id="number" type="number" placeholder="Age" min="13" max="120" required></label>
+            <label>Which option best describes your current role?<select id="dropdown">
+                <option  disabled selected hidden>Select current role</option>
+                <option>Student</option>
+                <option>Full Time Job</option>
+                <option>Full Time Learner</option>
+                <option>Perfer not to say</option>
+                <option>Other</option>
+            </select></label>
+            <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <label><input type="radio"  class="inline" name="recommendation" value="Definitely" checked>Definitely</label>
+                <label><input type="radio"  class="inline" name="recommendation" value="Maybe">Maybe</label>
+                <label><input type="radio"  class="inline" name="recommendation" value="Not sure">Not sure</label>
+            <fieldset id="checkboxfield">
+                What would you like to see improved? (Check all that apply)
+                <article><label class="label"><input type="checkbox" class="button" value="Front-end Projects"> Front-end Projects</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Back-end Projects"> Back-end Projects</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Data Visualization"> Data Visualization</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Challenges"> Challenges</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Open Source Community"> Open Source Community</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Gitter help rooms"> Gitter help rooms</label></article>
+                <article> <label class="label"><input type="checkbox" class="button" value="Videos"> Videos</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="City Meetups"> City Meetups</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Wiki"> Wiki</label></article>
+                <article><label class="label"><input type="checkbox" class="button" value="Forum"> Forum</label></article>
+                <article> <label class="label"><input type="checkbox" class="button" value="Additonal Courses"> Additional Courses</label></article>
+            </fieldset>
+            <fieldset>
+                <label>Any comments or suggestions?<textarea placeholder="Enter your comment here..."></textarea></label>
+            </fieldset>
+            <button type="submit" id="submit" value="SUBMIT">
+            
+        </form>
+    </div>
     </body>
+    <footer>
+    <!--The footer contains the visible elements found on the websites foot, or the bottom-most section of the site. Same as Microsoft Word footers-->
+    </footer>
 </html>
